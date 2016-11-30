@@ -23,11 +23,15 @@ $background-color:  #fff;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #6db56d,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  primary: #6db56d,
+  secondary: #32db64,
+  danger: #f53d3d,
+  light: #f4f4f4,
+  dark: #222,
+  twitter: #33ccff,
+  facebook: #4264aa,
+  google-plus: #e15f4f,
+  instagram: #467fad
 );
 
 
@@ -45,25 +49,15 @@ $colors: (
 
 
 // Change #000 to any color to see the md text color change
-$text-md-color:                           #000;
-
 // Use the primary color as the background for the toolbar-md-background
-$toolbar-md-background:                   color($colors, primary);
+$toolbar-md-background: color($colors, primary);
 
 // Use the default background for the tabbar since it inherits from toolbar
-$tabs-md-background:                      #f8f8f8;
+$tabs-md-background:#f8f8f8;
 
 // Change the color of the tabs text
-$tabs-md-tab-color-active:                color($colors, primary);
-$tabs-md-tab-color:                       rgba(#8c8c8c, 0.7);
-
-// Change the color of the segment button text
-$toolbar-md-active-color:                 #fff;
-$toolbar-md-inactive-color:               #fff;
-$segment-button-md-text-color-activated:  #fff;
-
-
-
+$tabs-md-tab-color-active: color($colors, primary);
+$tabs-md-tab-color: rgba(#8c8c8c, 0.7);
 
 // App Windows Variables
 // --------------------------------------------------
