@@ -4,15 +4,16 @@ import { NavController } from "ionic-angular";
 import { PlatoData } from "../../providers/plato-data"
 
 @Component({
-  selector: "page-carta",
-  templateUrl: "carta.html"
+  selector: 'page-carta',
+  templateUrl: 'carta.html'
 })
 export class CartaPage {
+  platos = [];
 
   constructor(public navCtrl: NavController, public platoData: PlatoData) {}
 
   ionViewDidLoad() {
-    console.log("Hello CartaPage Page");
+    this.platos = this.platoData.getPlatos();
   }
 
 }

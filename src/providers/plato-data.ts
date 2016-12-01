@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the PlatoData provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class PlatoData {
+  private platos = [];
 
   constructor() {
-    console.log('Hello PlatoData Provider');
+    for (var i = 0; i < 10; i++) {
+      this.platos.push({
+        nombre: "Lomo Saltado",
+        precio: "$ 5.500",
+        foto: "assets/img/platos/lomo-saltado.jpg"
+      });
+    }
+  }
+
+  getPlatos() {
+    return this.platos;
   }
 
 }

@@ -6,10 +6,10 @@
 
 <ion-content class="card-background-page">
 
-  <ion-card>
-    <img src="assets/img/platos/lomo-saltado.jpg"/>
-    <div class="card-title">Lomo Saltado</div>
-    <div class="card-subtitle">$ 5.400</div>
+  <ion-card *ngFor="let plato of platos">
+    <img [src]="plato.foto"/>
+    <div class="card-title">{{ plato.nombre }}</div>
+    <div class="card-subtitle">{{ plato.precio }}</div>
   </ion-card>
 
 </ion-content>
