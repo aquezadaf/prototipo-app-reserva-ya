@@ -1,22 +1,18 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component } from "@angular/core";
+import { NavController } from "ionic-angular";
 
-/*
-  Generated class for the Carta page.
+import { PlatoData } from "../../providers/plato-data"
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
-  selector: 'page-carta',
-  templateUrl: 'carta.html'
+  selector: "page-carta",
+  templateUrl: "carta.html"
 })
 export class CartaPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public platoData: PlatoData) {}
 
   ionViewDidLoad() {
-    console.log('Hello CartaPage Page');
+    console.log("Hello CartaPage Page");
   }
 
 }
