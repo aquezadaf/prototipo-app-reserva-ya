@@ -15,12 +15,20 @@ export class CartaPage {
   constructor(public navCtrl: NavController, public platoData: PlatoData) { }
 
   ionViewDidLoad() {
+    this.cargarPlatos();
+  }
+
+  private cargarPlatos() {
     this.platos = this.platoData.getPlatos();
   }
 
   buscarPlatos(evento: any) {
     let nombrePlato = evento.target.value;
-    this.platos = this.platoData.buscarPlatos(nombrePlato);
+    if (!nombrePlato) {
+      this.cargarPlatos();
+    } else {
+      this.platos = this.platoData.buscarPlatos(nombrePlato);
+    }
   }
 
   verDetallePlato(plato: Plato) {
