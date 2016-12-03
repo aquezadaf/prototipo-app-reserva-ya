@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
+import { Plato } from "../models/plato"
+
 @Injectable()
 export class PlatoData {
-  private platos = [];
+  private platos: Plato[] = [];
 
   constructor() {
     for (var i = 0; i < 10; i++) {
-      this.platos.push({
-        nombre: "Lomo Saltado",
-        precio: "$ 5.500",
-        foto: "assets/img/platos/lomo-saltado.jpg"
-      });
+      let platosRestorant = [
+        new Plato("Lomo Saltado", 5500)
+      ];
+
+      this.platos = this.platos.concat(platosRestorant);
     }
   }
 
-  getPlatos() {
+  getPlatos(): Plato[] {
     return this.platos;
   }
-
 }
