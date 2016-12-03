@@ -5,8 +5,8 @@ import { PlatoData } from "../../providers/plato-data"
 import { Plato } from "../../models/plato"
 
 @Component({
-  selector: 'page-carta',
-  templateUrl: 'carta.html'
+  selector: "page-carta",
+  templateUrl: "carta.html"
 })
 export class CartaPage {
   platos: Plato[] = [];
