@@ -7,6 +7,7 @@ import { TabsPage } from "../pages/tabs/tabs";
 import { LoginPage } from "../pages/login/login";
 import { CartaPage } from "../pages/carta/carta";
 import { DetalleCartaPage } from "../pages/detalle-carta/detalle-carta";
+import { MesasPage } from "../pages/mesas/mesas";
 
 import { PlatoData } from "../providers/plato-data";
 
@@ -16,7 +17,8 @@ import { PlatoData } from "../providers/plato-data";
     TabsPage,
     LoginPage,
     CartaPage,
-    DetalleCartaPage
+    DetalleCartaPage,
+    MesasPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -27,7 +29,8 @@ import { PlatoData } from "../providers/plato-data";
     TabsPage,
     LoginPage,
     CartaPage,
-    DetalleCartaPage
+    DetalleCartaPage,
+    MesasPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, PlatoData]
 })
