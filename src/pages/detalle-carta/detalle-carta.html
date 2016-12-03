@@ -16,14 +16,16 @@
             <p>
                 {{ plato.descripcion }}
             </p>
-            <p>
-                Ingredientes: {{ plato.ingredientes }}
-            </p>
-
-            <ion-item>
-                <ion-icon name="logo-usd" item-left></ion-icon>
-                {{ plato.precio | currency:"USD":true:"3.0-0" }}
-            </ion-item>
+            <ion-item-group>
+                <ion-item-divider>Precio</ion-item-divider>
+                <ion-item>
+                    {{ plato.precio | currency:"USD":true:"3.0-0" }}
+                </ion-item>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-item-divider>Ingredientes</ion-item-divider>
+                <ion-item *ngFor="let ingrediente of plato.ingredientes">{{ ingrediente }}</ion-item>
+            </ion-item-group>
         </ion-card-content>
     </ion-card>
 
