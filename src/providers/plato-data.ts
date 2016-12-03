@@ -27,6 +27,7 @@ export class PlatoData {
   }
 
   buscarPlatos(nombrePlato: string): Plato[] {
+    nombrePlato = nombrePlato.toLowerCase();
     return this.platos.filter(plato => {
       return plato.nombre.toLowerCase().indexOf(nombrePlato) > -1;
     });
