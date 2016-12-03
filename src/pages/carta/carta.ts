@@ -19,6 +19,6 @@ export class CartaPage {
   }
 
   verDetallePlato(plato: Plato) {
-    this.navCtrl.push(DetalleCartaPage);
+    this.navCtrl.push(DetalleCartaPage, plato);
   }
 }
