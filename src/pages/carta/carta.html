@@ -6,6 +6,8 @@
 
 <ion-content class="card-background-page">
 
+  <ion-searchbar (ionInput)="buscarPlatos($event)"></ion-searchbar>
+
   <ion-card *ngFor="let plato of platos" (click)="verDetallePlato(plato)">
     <img [src]="plato.rutaFoto" />
     <div class="card-title">{{ plato.nombre }}</div>

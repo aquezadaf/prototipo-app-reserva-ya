@@ -25,4 +25,10 @@ export class PlatoData {
   getPlatos(): Plato[] {
     return this.platos;
   }
+
+  buscarPlatos(nombrePlato: string): Plato[] {
+    return this.platos.filter(plato => {
+      return plato.nombre.toLowerCase().indexOf(nombrePlato) > -1;
+    });
+  }
 }
