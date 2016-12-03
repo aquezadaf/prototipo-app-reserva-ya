@@ -11,7 +11,7 @@ import { Plato } from "../../models/plato"
 export class CartaPage {
   platos: Plato[] = [];
 
-  constructor(public navCtrl: NavController, public platoData: PlatoData) {}
+  constructor(public navCtrl: NavController, public platoData: PlatoData) { }
 
   ionViewDidLoad() {
     this.platos = this.platoData.getPlatos();

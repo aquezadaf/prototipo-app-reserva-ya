@@ -8,13 +8,18 @@ export class PlatoData {
   private platos: Plato[] = [];
 
   constructor() {
-    for (var i = 0; i < 10; i++) {
-      let platosRestorant = [
-        new Plato("Lomo Saltado", 5500)
-      ];
-
-      this.platos = this.platos.concat(platosRestorant);
-    }
+    this.platos = [
+      new Plato("Lomo Saltado", 5800),
+      new Plato("Maki Ahuancainado", 3800),
+      new Plato("Aji de Gallina", 4500),
+      new Plato("Ceviche Pescado", 4300),
+      new Plato("Papa a la Huancaina", 5200),
+      new Plato("Anticuchos corazon Res", 6000),
+      new Plato("Suspiro Limeño", 1500),
+      new Plato("Pisco Sour", 1800),
+      new Plato("Ensalada Primavera", 2300),
+      new Plato("Carapulcra", 3900)
+    ];
   }
 
   getPlatos(): Plato[] {
