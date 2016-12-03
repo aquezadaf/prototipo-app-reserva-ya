@@ -1,5 +1,30 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Detalle de la carta</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{ plato.nombre }}</ion-title>
+    </ion-navbar>
 </ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <img [src]="plato.rutaFoto" />
+
+        <ion-card-content>
+            <ion-card-title>
+                {{ plato.nombre }}
+            </ion-card-title>
+            <p>
+                {{ plato.descripcion }}
+            </p>
+            <p>
+                Ingredientes: {{ plato.ingredientes }}
+            </p>
+
+            <ion-item>
+                <ion-icon name="logo-usd" item-left></ion-icon>
+                {{ plato.precio | currency:"USD":true:"3.0-0" }}
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
