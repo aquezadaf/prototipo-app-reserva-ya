@@ -4,17 +4,19 @@ import { IonicApp, IonicModule, IonicErrorHandler } from "ionic-angular";
 import { MyApp } from "./app.component";
 
 import { TabsPage } from "../pages/tabs/tabs";
-import { LoginPage } from "../pages/login/login"
-import { CartaPage } from "../pages/carta/carta"
+import { LoginPage } from "../pages/login/login";
+import { CartaPage } from "../pages/carta/carta";
+import { DetalleCartaPage } from "../pages/detalle-carta/detalle-carta";
 
-import { PlatoData } from "../providers/plato-data"
+import { PlatoData } from "../providers/plato-data";
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
     LoginPage,
-    CartaPage
+    CartaPage,
+    DetalleCartaPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +26,8 @@ import { PlatoData } from "../providers/plato-data"
     MyApp,
     TabsPage,
     LoginPage,
-    CartaPage
+    CartaPage,
+    DetalleCartaPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, PlatoData]
 })

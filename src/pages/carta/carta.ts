@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
 
-import { PlatoData } from "../../providers/plato-data"
-import { Plato } from "../../models/plato"
+import {DetalleCartaPage} from "../detalle-carta/detalle-carta";
+import { PlatoData } from "../../providers/plato-data";
+import { Plato } from "../../models/plato";
 
 @Component({
   selector: "page-carta",
@@ -17,4 +18,7 @@ export class CartaPage {
     this.platos = this.platoData.getPlatos();
   }
 
+  verDetallePlato(plato: Plato) {
+    this.navCtrl.push(DetalleCartaPage);
+  }
 }

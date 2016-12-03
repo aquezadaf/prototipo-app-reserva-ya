@@ -6,7 +6,7 @@
 
 <ion-content class="card-background-page">
 
-  <ion-card *ngFor="let plato of platos">
+  <ion-card *ngFor="let plato of platos" (click)="verDetallePlato(plato)">
     <img [src]="plato.rutaFoto" />
     <div class="card-title">{{ plato.nombre }}</div>
     <div class="card-subtitle">{{ plato.precio | currency:"USD":true:"3.0-0" }}</div>
