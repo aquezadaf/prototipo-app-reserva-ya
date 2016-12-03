@@ -17,17 +17,17 @@ export class Plato {
     get ingredientes(): string[] {
         return [
             "Carne de res",
-            "sal",
-            "pimienta",
-            "comino",
-            "cebolla",
-            "ajo",
-            "ají verde",
-            "vinagre tinto o blanco",
-            "tomate",
-            "perejil",
-            "papas",
-            "aceite"
+            "Sal",
+            "Pimienta",
+            "Comino",
+            "Cebolla",
+            "Ajo",
+            "Ají verde",
+            "Vinagre tinto o blanco",
+            "Tomate",
+            "Perejil",
+            "Papas",
+            "Aceite"
         ]
     }
 }
