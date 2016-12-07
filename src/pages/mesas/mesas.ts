@@ -8,6 +8,9 @@ import { NavController } from "ionic-angular";
 })
 export class MesasPage {
     // TODO: Considerar agregar la opcion para filtrar mesas para fumadores y otras cosas
+    fechaReserva: string;
 
-    constructor(public navController: NavController) {}
+    constructor(public navController: NavController) {
+        this.fechaReserva = new Date().toISOString();
+    }
 }
