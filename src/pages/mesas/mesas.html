@@ -1,37 +1,37 @@
-<!--<ion-menu [content]="mycontent">
+<ion-menu [content]="contenidoMesas">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Pages</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <ion-content>
     <ion-list>
-    ...
+      <button ion-item (click)="openPage(loginPage)">
+        Login
+      </button>
+      <button ion-item (click)="openPage(signupPage)">
+        Signup
+      </button>
     </ion-list>
   </ion-content>
-</ion-menu>-->
-
-
-
-
-<!--<ion-menu [content]="mycontent">
-  <ion-content>
-    <ion-list>
-      <button ion-button menuClose ion-item detail-none>Close Menu</button>
-    </ion-list>
-  </ion-content>
-</ion-menu>-->
-
-
-<!--<ion-nav #mycontent [root]="rootPage"></ion-nav>-->
-
+</ion-menu>
 
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Mesas</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content #mycontent>
+<ion-content #contenidoMesas>
 
   <ion-item>
     <ion-label>Fecha reserva</ion-label>
-    <ion-datetime displayFormat="DD/MM/YYYY hh:mm A" pickerFormat="DD/MM/YYYY hh:mm A" [(ngModel)]="fechaReserva" cancelText="Cancelar" doneText="Aceptar"></ion-datetime>
+    <ion-datetime displayFormat="DD/MM/YYYY hh:mm A" pickerFormat="DD/MM/YYYY hh:mm A" doneText="Aceptar" cancelText="Cancelar"
+      [(ngModel)]="fechaReserva">
+    </ion-datetime>
   </ion-item>
 
   <ion-item *ngFor="let filtro of filtrosMesas">
