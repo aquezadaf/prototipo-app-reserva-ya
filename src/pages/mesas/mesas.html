@@ -1,18 +1,20 @@
 <ion-menu [content]="contenidoMesas">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Pages</ion-title>
+      <ion-title>Mesas</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list>
-      <button ion-item (click)="openPage(loginPage)">
-        Login
-      </button>
-      <button ion-item (click)="openPage(signupPage)">
-        Signup
-      </button>
-    </ion-list>
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY hh:mm A" pickerFormat="DD/MM/YYYY hh:mm A" doneText="Aceptar" cancelText="Cancelar"
+        [(ngModel)]="fechaReserva">
+      </ion-datetime>
+    </ion-item>
+    <ion-item *ngFor="let filtro of filtrosMesas">
+      <ion-label>{{ filtro }}</ion-label>
+      <ion-checkbox color="primary" checked="false"></ion-checkbox>
+    </ion-item>
   </ion-content>
 </ion-menu>
 
@@ -26,17 +28,5 @@
 </ion-header>
 
 <ion-content #contenidoMesas>
-
-  <ion-item>
-    <ion-label>Fecha reserva</ion-label>
-    <ion-datetime displayFormat="DD/MM/YYYY hh:mm A" pickerFormat="DD/MM/YYYY hh:mm A" doneText="Aceptar" cancelText="Cancelar"
-      [(ngModel)]="fechaReserva">
-    </ion-datetime>
-  </ion-item>
-
-  <ion-item *ngFor="let filtro of filtrosMesas">
-    <ion-label>{{ filtro }}</ion-label>
-    <ion-checkbox color="primary" checked="false"></ion-checkbox>
-  </ion-item>
 
 </ion-content>
