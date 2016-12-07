@@ -8,6 +8,7 @@ import { LoginPage } from "../pages/login/login";
 import { CartaPage } from "../pages/carta/carta";
 import { DetalleCartaPage } from "../pages/detalle-carta/detalle-carta";
 import { MesasPage } from "../pages/mesas/mesas";
+import { RestaurantPage } from "../pages/restaurant/restaurant";
 
 import { PlatoData } from "../providers/plato-data";
 
@@ -18,20 +19,30 @@ import { PlatoData } from "../providers/plato-data";
     LoginPage,
     CartaPage,
     DetalleCartaPage,
-    MesasPage
+    MesasPage,
+    RestaurantPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
   ],
-  bootstrap: [IonicApp],
+  bootstrap: [
+    IonicApp
+  ],
   entryComponents: [
     MyApp,
     TabsPage,
     LoginPage,
     CartaPage,
     DetalleCartaPage,
-    MesasPage
+    MesasPage,
+    RestaurantPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, PlatoData]
+  providers: [
+    {
+      provide: ErrorHandler,
+      useClass: IonicErrorHandler
+    },
+    PlatoData
+  ]
 })
-export class AppModule {}
+export class AppModule { }
