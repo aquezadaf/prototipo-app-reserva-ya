@@ -24,15 +24,19 @@
       </ion-item>
       <ion-item (click)="abrirMapa()" no-lines>
         <ion-icon name="pin" color="primary" item-left></ion-icon>
-        Av. Concha Y Toro 1149, Puente Alto
+        {{ contactos.direccion }}
       </ion-item>
-      <ion-item no-lines>
+      <ion-item (click)="abrirTwitter()" no-lines>
         <ion-icon name="logo-twitter" color="primary" item-left></ion-icon>
-        @reservaya
+        @{{ contactos.twitter }}
       </ion-item>
-      <ion-item no-lines>
+      <ion-item (click)="abrirCorreo()" no-lines>
+        <ion-icon name="mail" color="primary" item-left></ion-icon>
+        {{ contactos.correo }}
+      </ion-item>
+      <ion-item (click)="abrirLlamada()" no-lines>
         <ion-icon name="call" color="primary" item-left></ion-icon>
-        +569 1234 5678
+        {{ contactos.telefono }}
       </ion-item>
     </ion-list>
   </div>
