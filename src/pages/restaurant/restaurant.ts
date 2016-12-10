@@ -23,7 +23,7 @@ export class RestaurantPage {
     }
 
     abrirTwitter() {
-        let urlPerfilTwitter = "https://twitter.com/" + this.contactos.twitter;
+        let urlPerfilTwitter = "https://twitter.com/intent/tweet?text=@" + this.contactos.twitter;
         this.abrirNavegador(urlPerfilTwitter);
     }
 
