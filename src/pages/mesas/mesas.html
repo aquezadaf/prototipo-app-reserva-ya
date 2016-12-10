@@ -6,10 +6,14 @@
   </ion-header>
   <ion-content>
     <ion-item>
-      <ion-label>Fecha</ion-label>
+      <ion-label stacked>Fecha reserva</ion-label>
       <ion-datetime displayFormat="DD/MM/YYYY hh:mm A" pickerFormat="DD/MM/YYYY hh:mm A" doneText="Aceptar" cancelText="Cancelar"
         [(ngModel)]="fechaReserva">
       </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Cantidad personas</ion-label>
+      <ion-input type="number" value="1" min="1" max="12"></ion-input>
     </ion-item>
     <ion-item *ngFor="let filtro of filtrosMesas">
       <ion-label>{{ filtro }}</ion-label>
