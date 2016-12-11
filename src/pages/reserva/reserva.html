@@ -1,7 +1,7 @@
-<ion-menu [content]="contenidoMesas">
+<ion-menu [content]="contenidoReserva">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Mesas</ion-title>
+      <ion-title>Reserva</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
@@ -27,11 +27,11 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Mesas</ion-title>
+    <ion-title>Reserva</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content #contenidoMesas>
+<ion-content #contenidoReserva>
   <div class="restaurant">
     <ol class="cabin fuselage">
       <li *ngFor="let fila of restaurant.filasMesasInterior">

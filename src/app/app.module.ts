@@ -7,7 +7,7 @@ import { TabsPage } from "../pages/tabs/tabs";
 import { LoginPage } from "../pages/login/login";
 import { CartaPage } from "../pages/carta/carta";
 import { DetalleCartaPage } from "../pages/detalle-carta/detalle-carta";
-import { MesasPage } from "../pages/mesas/mesas";
+import { ReservaPage } from "../pages/reserva/reserva";
 import { RestaurantPage } from "../pages/restaurant/restaurant";
 
 import { PlatoData } from "../providers/plato-data";
@@ -20,7 +20,7 @@ import { RestaurantData } from "../providers/restaurant-data";
     LoginPage,
     CartaPage,
     DetalleCartaPage,
-    MesasPage,
+    ReservaPage,
     RestaurantPage
   ],
   imports: [
@@ -35,7 +35,7 @@ import { RestaurantData } from "../providers/restaurant-data";
     LoginPage,
     CartaPage,
     DetalleCartaPage,
-    MesasPage,
+    ReservaPage,
     RestaurantPage
   ],
   providers: [

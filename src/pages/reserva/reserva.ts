@@ -7,10 +7,10 @@ import { Restaurant } from "../../models/restaurant";
 import { Mesa } from "../../models/mesa";
 
 @Component({
-    selector: "page-mesas",
-    templateUrl: "mesas.html"
+    selector: "page-reserva",
+    templateUrl: "reserva.html"
 })
-export class MesasPage {
+export class ReservaPage {
     private mesasSeleccionadas: Mesa[];
     fechaReserva: string;
     filtrosMesas: string[];
