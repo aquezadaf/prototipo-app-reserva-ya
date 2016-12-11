@@ -11,6 +11,7 @@ import { MesasPage } from "../pages/mesas/mesas";
 import { RestaurantPage } from "../pages/restaurant/restaurant";
 
 import { PlatoData } from "../providers/plato-data";
+import { RestaurantData } from "../providers/restaurant-data";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PlatoData } from "../providers/plato-data";
       provide: ErrorHandler,
       useClass: IonicErrorHandler
     },
-    PlatoData
+    PlatoData,
+    RestaurantData
   ]
 })
 export class AppModule { }
