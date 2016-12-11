@@ -32,34 +32,34 @@
 </ion-header>
 
 <ion-content #contenidoMesas>
-
   <div class="restaurant">
-
     <ol class="cabin fuselage">
       <li *ngFor="let fila of restaurant.filasMesasInterior">
         <ol class="seats">
           <li *ngFor="let mesa of fila" class="seat">
-            <input type="checkbox" [id]="mesa.id" [disabled]="mesa.reservada" />
+            <input type="checkbox" [id]="mesa.id" [disabled]="mesa.reservada" (click)="seleccionarMesa(mesa)" />
             <label [attr.for]="mesa.id">{{ mesa.cantidadAsientos }}</label>
           </li>
         </ol>
       </li>
     </ol>
-
     <div class="exit exit--back fuselage">
     </div>
-
     <ol class="cabin">
       <li *ngFor="let fila of restaurant.filasMesasExterior">
         <ol class="seats">
           <li *ngFor="let mesa of fila" class="seat">
-            <input type="checkbox" [id]="mesa.id" [disabled]="mesa.reservada" />
+            <input type="checkbox" [id]="mesa.id" [disabled]="mesa.reservada" (click)="seleccionarMesa(mesa)" />
             <label [attr.for]="mesa.id">{{ mesa.cantidadAsientos }}</label>
           </li>
         </ol>
       </li>
     </ol>
-
   </div>
 
+  <ion-fab [hidden]="!mostrarFab" right bottom>
+    <button [disabled]="!habilitarFab" ion-fab mini>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>
