@@ -26,7 +26,7 @@ export class Restaurant {
         let filasInterior = this.cantidadFilasInterior();
 
         this.organizarMesasGrupo(0, filasInterior, this.filasMesasInterior);
-        this.organizarMesasGrupo(filasInterior - 1, filasExterior, this.filasMesasExterior);
+        this.organizarMesasGrupo(filasInterior * this.cantidadMesasFila, filasExterior, this.filasMesasExterior);
     }
 
     private organizarMesasGrupo(indiceUltimaMesa: number, cantidadFilas: number, arregloContenedor: Mesa[][]) {
