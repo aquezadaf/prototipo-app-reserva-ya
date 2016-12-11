@@ -13,63 +13,22 @@ export class RestaurantData {
     }
 
     private getMesas(): Mesa[] {
-        return [
-            new Mesa(this.idMesas++, 4, false, false, true),
-            new Mesa(this.idMesas++, 4, true, false, true),
-            new Mesa(this.idMesas++, 4, false, false, true),
-
-            new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, false, false, false),
-
-            new Mesa(this.idMesas++, 4, true, false, true),
-            new Mesa(this.idMesas++, 4, true, false, true),
-            new Mesa(this.idMesas++, 4, false, false, true),
-
-            new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, false, false, false),
-
-            new Mesa(this.idMesas++, 4, true, false, true),
-            new Mesa(this.idMesas++, 4, true, false, true),
-            new Mesa(this.idMesas++, 4, false, false, true),
-
-            new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, false, false, false),
-
-            new Mesa(this.idMesas++, 4, true, false, true),
-            new Mesa(this.idMesas++, 4, true, false, true),
-            new Mesa(this.idMesas++, 4, false, false, true),
-
-            new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, false, false, false),
-
-            new Mesa(this.idMesas++, 6, true, true, false),
-            new Mesa(this.idMesas++, 6, true, true, false),
-            new Mesa(this.idMesas++, 6, false, true, false),
-
-            new Mesa(this.idMesas++, 6, true, false, true),
-            new Mesa(this.idMesas++, 6, false, false, true),
-            new Mesa(this.idMesas++, 6, true, false, true),
-
-            new Mesa(this.idMesas++, 6, false, true, false),
-            new Mesa(this.idMesas++, 6, false, true, false),
-            new Mesa(this.idMesas++, 6, false, true, false),
-
-            new Mesa(this.idMesas++, 6, false, false, true),
-            new Mesa(this.idMesas++, 6, false, false, true),
-            new Mesa(this.idMesas++, 6, true, false, true)
-        ];
+        return this.generarMesas(60);
     }
 
-    // private generarMesas(cantidadFilasMesas: number): Mesa[] {
-    //     let mesas: Mesa[];
-    //     for (let i = 0; i < cantidadFilasMesas; i++) {
-    //         for (let j = 0; i < this.cantidadMesasFila; j++) {
-    //             mesas.push(new Mesa(1, ));
-    //         }
-    //     }
-    // }
+    private generarMesas(cantidadMesas: number): Mesa[] {
+        let mesas: Mesa[] = [];
+        for (let i = 0; i < cantidadMesas; i++) {
+            mesas.push(this.generarMesa(i + 1));
+        }
+        return mesas;
+    }
+
+    private generarMesa(idMesa: number): Mesa {
+        let cantidadAsientos = Math.floor(Math.random() * 6) + 1;
+        let mesaReservada = Math.random() >= 0.5;
+        let permiteFumadores = Math.random() >= 0.5;
+        let permiteNiños = Math.random() >= 0.5;
+        return new Mesa(idMesa, cantidadAsientos, mesaReservada, permiteFumadores, permiteNiños);
+    }
 }
