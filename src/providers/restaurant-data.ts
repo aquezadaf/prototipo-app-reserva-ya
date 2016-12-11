@@ -9,10 +9,10 @@ export class RestaurantData {
     }
 
     getRestaurant(): Restaurant {
-        return new Restaurant(this.getMesasInterior(), this.getMesasExterior());
+        return new Restaurant(this.getMesas());
     }
 
-    private getMesasInterior(): Mesa[] {
+    private getMesas(): Mesa[] {
         return [
             new Mesa(this.idMesas++, 4, false, false, true),
             new Mesa(this.idMesas++, 4, true, false, true),
@@ -44,13 +44,8 @@ export class RestaurantData {
 
             new Mesa(this.idMesas++, 2, true, false, false),
             new Mesa(this.idMesas++, 2, true, false, false),
-            new Mesa(this.idMesas++, 2, false, false, false)
+            new Mesa(this.idMesas++, 2, false, false, false),
 
-        ];
-    }
-
-    private getMesasExterior(): Mesa[] {
-        return [
             new Mesa(this.idMesas++, 6, true, true, false),
             new Mesa(this.idMesas++, 6, true, true, false),
             new Mesa(this.idMesas++, 6, false, true, false),
