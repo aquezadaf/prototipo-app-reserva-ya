@@ -6,7 +6,7 @@ export class Restaurant {
     private cantidadMesasFila;
 
     constructor(private mesas: Mesa[]) {
-        this.cantidadMesasFila = 3;
+        this.cantidadMesasFila = 6;
         this.filasMesasExterior = [];
         this.filasMesasInterior = [];
         this.validarCantidadMesas();
@@ -24,12 +24,12 @@ export class Restaurant {
     private organizarMesas() {
         let filasExterior = this.cantidadFilasExterior();
         let filasInterior = this.cantidadFilasInterior();
-        
+
         this.organizarMesasGrupo(0, filasInterior, this.filasMesasInterior);
         this.organizarMesasGrupo(filasInterior - 1, filasExterior, this.filasMesasExterior);
     }
 
-    private organizarMesasGrupo(indiceUltimaMesa:number, cantidadFilas: number, arregloContenedor: Mesa[][]) {
+    private organizarMesasGrupo(indiceUltimaMesa: number, cantidadFilas: number, arregloContenedor: Mesa[][]) {
         for (let i = 0; i < cantidadFilas; i++) {
             let filaMesa: Mesa[] = [];
             for (let j = 0; j < this.cantidadMesasFila; j++) {
