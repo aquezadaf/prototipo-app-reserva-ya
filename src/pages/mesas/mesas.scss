@@ -1,14 +1,9 @@
 // Basado en: http://codepen.io/siiron/pen/MYXZWg
-
 *,*:before,*:after {
   box-sizing: border-box;
 }
 
-// html {
-//   font-size: 16px;
-// }
-
-.plane {
+.restaurant {
   margin: 20px auto;
   max-width: 300px;
 }
@@ -18,7 +13,7 @@
   height: 50px;
   &:before,
   &:after {
-    content: "EXIT";
+    content: "SALIDA";
     font-size: 14px;
     line-height: 18px;
     padding: 0px 2px;
@@ -83,7 +78,7 @@ ol {
       text-indent: -9999px;
       overflow: hidden;
       &:after {
-        content: "X";
+        content: "";
         text-indent: 0;
         position: absolute;
         top: 4px;
@@ -105,7 +100,7 @@ ol {
     font-weight: bold;
     line-height: 1.5rem;
     padding: 4px 0;
-    background: #F42536;
+    background: #cc6600;
     border-radius: 5px;
     animation-duration: 300ms;
     animation-fill-mode: both;
