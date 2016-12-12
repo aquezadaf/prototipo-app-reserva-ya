@@ -12,6 +12,46 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+    <ion-list>
+        <ion-item>
+            Fecha Reserva
+            <ion-note item-right>
+                {{ fechaReserva }}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            Hora Reserva
+            <ion-note item-right>
+                {{ horaReserva }}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            Cantidad asientos
+            <ion-note item-right>
+                {{ mesa.cantidadAsientos }}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            Permite fumadores
+            <ion-note item-right>
+                {{ mesa.fumadores ? "Si" : "No" }}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            Permite niños
+            <ion-note item-right>
+                {{ mesa.conNinos ? "Si": "No" }}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            Esta en exterior
+            <ion-note item-right>
+                {{ estaEnExterior ? "Si" : "No" }}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            <button (click)="reservar()" ion-button full default>Reservar</button>
+        </ion-item>
+    </ion-list>
 </ion-content>
