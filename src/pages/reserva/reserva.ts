@@ -1,7 +1,5 @@
 import { Component } from "@angular/core";
-
 import { NavController } from "ionic-angular";
-
 import { RestaurantData } from "../../providers/restaurant-data";
 import { Restaurant } from "../../models/restaurant";
 import { Mesa } from "../../models/mesa";

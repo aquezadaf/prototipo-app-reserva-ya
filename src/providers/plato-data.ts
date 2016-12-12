@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import "rxjs/add/operator/map";
-
 import { Plato } from "../models/plato";
 
 @Injectable()

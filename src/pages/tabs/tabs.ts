@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-
 import { LoginPage } from "../login/login";
 import { CartaPage } from "../carta/carta";
 import { ReservaPage } from "../reserva/reserva";

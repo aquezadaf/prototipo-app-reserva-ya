@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-
 import { Plato } from "../../models/plato";
 
 @Component({
