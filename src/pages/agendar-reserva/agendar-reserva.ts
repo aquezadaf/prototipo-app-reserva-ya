@@ -1,10 +1,14 @@
 import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
+import { ViewController } from "ionic-angular";
 
 @Component({
     selector: "page-agendar-reserva",
     templateUrl: "agendar-reserva.html"
 })
 export class AgendarReservaPage {
-    constructor(public navController: NavController) { }
+    constructor(public viewCtrl: ViewController) { }
+
+    cerrarModal() {
+        this.viewCtrl.dismiss();
+    }
 }
