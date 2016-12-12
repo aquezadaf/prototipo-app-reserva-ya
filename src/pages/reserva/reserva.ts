@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
+import { NavController, ModalController } from "ionic-angular";
+import { AgendarReservaPage } from "../agendar-reserva/agendar-reserva";
 import { RestaurantData } from "../../providers/restaurant-data";
 import { Restaurant } from "../../models/restaurant";
 import { Mesa } from "../../models/mesa";
@@ -16,7 +17,11 @@ export class ReservaPage {
     mostrarFab: boolean;
     habilitarFab: boolean;
 
-    constructor(public navController: NavController, public restaurantData: RestaurantData) {
+    constructor(
+        public navController: NavController,
+        public modalCtrl: ModalController,
+        public restaurantData: RestaurantData
+    ) {
         this.mesasSeleccionadas = [];
         this.fechaReserva = new Date().toISOString();
         this.mostrarFab = false;
@@ -70,5 +75,10 @@ export class ReservaPage {
             .map(mesa => {
                 return mesa.id;
             }).indexOf(mesaSeleccionada.id);
+    }
+
+    abrirModalReserva() {
+        let modal = this.modalCtrl.create(AgendarReservaPage);
+        modal.present();
     }
 }

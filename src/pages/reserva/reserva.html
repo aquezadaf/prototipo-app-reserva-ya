@@ -58,7 +58,7 @@
   </div>
 
   <ion-fab [hidden]="!mostrarFab" right bottom>
-    <button [disabled]="!habilitarFab" ion-fab mini>
+    <button [disabled]="!habilitarFab" (click)="abrirModalReserva()" ion-fab mini>
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>

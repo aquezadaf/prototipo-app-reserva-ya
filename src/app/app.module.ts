@@ -6,6 +6,7 @@ import { LoginPage } from "../pages/login/login";
 import { CartaPage } from "../pages/carta/carta";
 import { DetalleCartaPage } from "../pages/detalle-carta/detalle-carta";
 import { ReservaPage } from "../pages/reserva/reserva";
+import { AgendarReservaPage } from "../pages/agendar-reserva/agendar-reserva";
 import { RestaurantPage } from "../pages/restaurant/restaurant";
 import { PlatoData } from "../providers/plato-data";
 import { RestaurantData } from "../providers/restaurant-data";
@@ -18,6 +19,7 @@ import { RestaurantData } from "../providers/restaurant-data";
     CartaPage,
     DetalleCartaPage,
     ReservaPage,
+    AgendarReservaPage,
     RestaurantPage
   ],
   imports: [
@@ -33,6 +35,7 @@ import { RestaurantData } from "../providers/restaurant-data";
     CartaPage,
     DetalleCartaPage,
     ReservaPage,
+    AgendarReservaPage,
     RestaurantPage
   ],
   providers: [
