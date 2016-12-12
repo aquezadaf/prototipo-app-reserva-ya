@@ -4,6 +4,6 @@ export class Mesa {
         public cantidadAsientos: number,
         public reservada: boolean,
         public fumadores: boolean,
-        public conNiños: boolean
+        public conNinos: boolean
     ) { }
 }

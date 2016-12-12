@@ -28,7 +28,7 @@ export class RestaurantData {
         let cantidadAsientos = Math.floor(Math.random() * 6) + 1;
         let mesaReservada = Math.random() >= 0.5;
         let permiteFumadores = Math.random() >= 0.5;
-        let permiteNiños = Math.random() >= 0.5;
-        return new Mesa(idMesa, cantidadAsientos, mesaReservada, permiteFumadores, permiteNiños);
+        let permiteNinos = Math.random() >= 0.5;
+        return new Mesa(idMesa, cantidadAsientos, mesaReservada, permiteFumadores, permiteNinos);
     }
 }

@@ -78,7 +78,13 @@ export class ReservaPage {
     }
 
     abrirModalReserva() {
-        let modal = this.modalCtrl.create(AgendarReservaPage);
-        modal.present();
+        let mesa = this.mesasSeleccionadas[0];
+        this.modalCtrl
+            .create(AgendarReservaPage, {
+                mesa: mesa,
+                fechaReserva: this.fechaReserva,
+                mesaEnExterior: this.restaurant.mesaEnExterior(mesa.id)
+            })
+            .present();
     }
 }
