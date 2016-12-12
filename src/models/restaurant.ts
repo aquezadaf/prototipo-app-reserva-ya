@@ -59,19 +59,13 @@ export class Restaurant {
         return cantidadMesas / this.cantidadMesasFila;
     }
 
-    reservarMesa(idMesa: number) {
-        let mesa = this.buscarMesa(idMesa);
-        mesa.reservada = true;
-    }
-
-    private buscarMesa(idMesa: number): Mesa {
-        let mesas = this.mesas.filter(mesa => {
-            return mesa.id === idMesa;
+    mesaEnExterior(idMesa: number) {
+        let mesas = this.filasMesasExterior.filter(filaMesa => {
+            return filaMesa.map(mesa => mesa.id).indexOf(idMesa) > -1;
         });
-        if (mesas && mesas[0]) {
-            return mesas[0];
-        } else {
-            return null;
+        if(mesas) {
+            return true;
         }
+        return false;
     }
 }
