@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
+import { NavController, LoadingController } from "ionic-angular";
 import { InAppBrowser } from "ionic-native";
 
 @Component({
@@ -14,7 +14,16 @@ export class LoginPage {
         googlePlus: "https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://plus.google.com/collections/featured&followup=https://plus.google.com/collections/featured#identifier"
     };
 
-    constructor(public navCtrl: NavController) { }
+    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) { }
+
+    iniciarSesion() {
+        this.loadingCtrl
+            .create({
+                content: "Cargando...",
+                duration: 1000
+            })
+            .present();
+    }
 
     abrirFacebook() {
         this.abrirNavegador(this.urlOauth.facebook);
