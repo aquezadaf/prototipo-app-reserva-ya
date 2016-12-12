@@ -23,7 +23,7 @@ export class AgendarReservaPage {
         this.toastCtrl
             .create({
                 message: "Mesa reservada",
-                duration: 3000
+                duration: 1300
             })
             .present();
         this.cerrarModal();
