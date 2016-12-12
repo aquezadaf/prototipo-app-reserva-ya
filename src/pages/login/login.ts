@@ -13,8 +13,11 @@ export class LoginPage {
         twitter: "https://mobile.twitter.com/session/new",
         googlePlus: "https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://plus.google.com/collections/featured&followup=https://plus.google.com/collections/featured#identifier"
     };
+    public usuarioLogeado: boolean;
 
-    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) { }
+    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) { 
+        this.usuarioLogeado = false;
+    }
 
     iniciarSesion() {
         this.loadingCtrl
@@ -23,6 +26,7 @@ export class LoginPage {
                 duration: 1000
             })
             .present();
+        this.usuarioLogeado = true;
     }
 
     abrirFacebook() {

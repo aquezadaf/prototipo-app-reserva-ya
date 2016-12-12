@@ -8,52 +8,54 @@
 
 <ion-content padding>
 
-    <ion-list>
-        <ion-item>
-            <ion-label floating>Usuario</ion-label>
-            <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Contraseña</ion-label>
-            <ion-input type="password"></ion-input>
-        </ion-item>
-        <ion-item no-lines>
-            <button (click)="iniciarSesion()" ion-button full default>Iniciar sesion</button>
-        </ion-item>
-        <ion-item no-lines>
-            <button ion-button full default>Registrarse</button>
-        </ion-item>
-    </ion-list>
+    <div [hidden]="usuarioLogeado">
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Usuario</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Contraseña</ion-label>
+                <ion-input type="password"></ion-input>
+            </ion-item>
+            <ion-item no-lines>
+                <button (click)="iniciarSesion()" ion-button full default>Iniciar sesion</button>
+            </ion-item>
+            <ion-item no-lines>
+                <button ion-button full default>Registrarse</button>
+            </ion-item>
+        </ion-list>
 
-    <ion-grid>
-        <ion-row>
-            <ion-col width-50>
-                <button (click)="abrirFacebook()" ion-button color="facebook" icon-left block>
+        <ion-grid>
+            <ion-row>
+                <ion-col width-50>
+                    <button (click)="abrirFacebook()" ion-button color="facebook" icon-left block>
                     <ion-icon name="logo-facebook"></ion-icon>
                     Facebook
                 </button>
-            </ion-col>
-            <ion-col width-50>
-                <button (click)="abrirInstagram()" ion-button color="instagram" icon-left block>
+                </ion-col>
+                <ion-col width-50>
+                    <button (click)="abrirInstagram()" ion-button color="instagram" icon-left block>
                     <ion-icon name="logo-instagram"></ion-icon>
                     Instagram
                 </button>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col width-50>
-                <button (click)="abrirTwitter()" ion-button color="twitter" icon-left block>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col width-50>
+                    <button (click)="abrirTwitter()" ion-button color="twitter" icon-left block>
                     <ion-icon name="logo-twitter"></ion-icon>
                     Twitter
                 </button>
-            </ion-col>
-            <ion-col width-50>
-                <button (click)="abrirGooglePlus()" ion-button color="google-plus" icon-left block>
+                </ion-col>
+                <ion-col width-50>
+                    <button (click)="abrirGooglePlus()" ion-button color="google-plus" icon-left block>
                     <ion-icon name="logo-googleplus"></ion-icon>
                     Google +
                 </button>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
 
 </ion-content>
