@@ -5,8 +5,9 @@
         </ion-title>
         <ion-buttons [hidden]="!usuarioLogeado" start>
             <button ion-button (click)="cerrarSesion()">
-                <span color="primary" showWhen="ios">Cerrar Sesión</span>
-                <span color="light" showWhen="android,windows,core">Cerrar Sesión</span>
+                <span color="primary" showWhen="ios">Cerrar</span>
+                <span color="primary" showWhen="windows">Cerrar Sesión</span>
+                <span color="light" showWhen="android,core">Cerrar Sesión</span>
             </button>
         </ion-buttons>
     </ion-navbar>
@@ -75,13 +76,13 @@
                 </ion-item>
                 <ion-item-options side="left">
                     <button ion-button color="google-plus" (click)="eliminarReserva(reserva)">
-                        <ion-icon name="close"></ion-icon>
+                        <ion-icon name="trash"></ion-icon>
                         Eliminar
                     </button>
                 </ion-item-options>
                 <ion-item-options side="right">
                     <button ion-button color="google-plus" (click)="eliminarReserva(reserva)">
-                        <ion-icon name="close"></ion-icon>
+                        <ion-icon name="trash"></ion-icon>
                         Eliminar
                     </button>
                 </ion-item-options>
