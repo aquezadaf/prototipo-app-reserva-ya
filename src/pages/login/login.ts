@@ -15,10 +15,12 @@ export class LoginPage {
         twitter: "https://mobile.twitter.com/session/new",
         googlePlus: "https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://plus.google.com/collections/featured&followup=https://plus.google.com/collections/featured#identifier"
     };
+    public tituloPantalla: string;
     public usuarioLogeado: boolean;
     public reservas: Reserva[];
 
     constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, private reservaData: ReservaData) {
+        this.tituloPantalla = "Perfil";
         this.usuarioLogeado = false;
         this.reservas = reservaData.getReservas();
     }
@@ -30,6 +32,7 @@ export class LoginPage {
         });
         cargando.onDidDismiss(() => {
             this.usuarioLogeado = true;
+            this.tituloPantalla = "Alejandro Quezada";
         });
         cargando.present();
     }

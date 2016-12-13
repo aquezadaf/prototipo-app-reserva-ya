@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            Perfil
+            {{ tituloPantalla }}
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -59,7 +59,6 @@
     </div>
 
     <div [hidden]="!usuarioLogeado">
-        <h1>Alejandro Quezada</h1>
         <ion-list>
             <ion-item-sliding *ngFor="let reserva of reservas">
                 <ion-item>
