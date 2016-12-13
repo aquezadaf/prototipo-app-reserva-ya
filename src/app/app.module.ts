@@ -10,6 +10,7 @@ import { AgendarReservaPage } from "../pages/agendar-reserva/agendar-reserva";
 import { RestaurantPage } from "../pages/restaurant/restaurant";
 import { PlatoData } from "../providers/plato-data";
 import { RestaurantData } from "../providers/restaurant-data";
+import { ReservaData } from "../providers/reserva-data";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { RestaurantData } from "../providers/restaurant-data";
       useClass: IonicErrorHandler
     },
     PlatoData,
-    RestaurantData
+    RestaurantData,
+    ReservaData
   ]
 })
 export class AppModule { }
