@@ -58,4 +58,29 @@
         </ion-grid>
     </div>
 
+    <div [hidden]="!usuarioLogeado">
+        <h1>Alejandro Quezada</h1>
+        <ion-list>
+            <ion-item-sliding *ngFor="let reserva of reservas">
+                <ion-item (click)="detalleReserva(reserva)">
+                    <ion-icon name="calendar" item-left></ion-icon>
+                    <h5>Reserva para el {{ reserva.fechaReserva }} a las {{ reserva.horaReserva }}</h5>
+                    <p>Mesa para {{ reserva.mesa.cantidadAsientos }}</p>
+                </ion-item>
+                <ion-item-options side="left">
+                    <button ion-button color="google-plus" (click)="eliminarReserva(reserva)">
+                        <ion-icon name="close"></ion-icon>
+                        Eliminar
+                    </button>
+                </ion-item-options>
+                <ion-item-options side="right">
+                    <button ion-button color="google-plus" (click)="eliminarReserva(reserva)">
+                        <ion-icon name="close"></ion-icon>
+                        Eliminar
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+    </div>
+
 </ion-content>

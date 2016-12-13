@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { NavController, LoadingController } from "ionic-angular";
 import { InAppBrowser } from "ionic-native";
+import { Reserva } from "../../models/reserva";
+import { ReservaData } from "../../providers/reserva-data";
 
 @Component({
     selector: "page-login",
@@ -14,9 +16,11 @@ export class LoginPage {
         googlePlus: "https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://plus.google.com/collections/featured&followup=https://plus.google.com/collections/featured#identifier"
     };
     public usuarioLogeado: boolean;
+    public reservas: Reserva[];
 
-    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
+    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, private reservaData: ReservaData) {
         this.usuarioLogeado = false;
+        this.reservas = reservaData.getReservas();
     }
 
     iniciarSesion() {
@@ -48,5 +52,14 @@ export class LoginPage {
 
     private abrirNavegador(urlPagina) {
         new InAppBrowser(urlPagina, "_system");
+    }
+
+    detalleReserva(reserva: Reserva) {
+        console.log("Abrir detalle reserva", reserva);
+    }
+
+    eliminarReserva(reserva: Reserva) {
+        let indice = this.reservas.indexOf(reserva);
+        this.reservas.splice(indice, 1); 
     }
 }
