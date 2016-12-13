@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ionicframework.prototiporeservaya628541" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>prototipo-reserva-ya</name>
+    <name>Reserva Ya</name>
     <description>Protipo de la aplicacion Reserva Ya!</description>
     <author>Alejandro Quezada</author>
     <content src="index.html" />
@@ -78,6 +78,6 @@
     </feature>
     <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0" />
-    <engine name="android" spec="~6.0.0" />
     <engine name="ios" spec="~4.3.1" />
+    <engine name="android" spec="~6.1.0" />
 </widget>
