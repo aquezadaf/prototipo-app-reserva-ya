@@ -12,8 +12,4 @@ export class DetalleCartaPage {
     constructor(public navCtrl: NavController, private navParams: NavParams) { 
         this.plato = navParams.data;
     }
-
-    ionViewDidLoad() {
-        console.log(this.plato);
-    }
 }
