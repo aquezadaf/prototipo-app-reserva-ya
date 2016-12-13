@@ -15,18 +15,19 @@ export class LoginPage {
     };
     public usuarioLogeado: boolean;
 
-    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) { 
+    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
         this.usuarioLogeado = false;
     }
 
     iniciarSesion() {
-        this.loadingCtrl
-            .create({
-                content: "Cargando...",
-                duration: 1000
-            })
-            .present();
-        this.usuarioLogeado = true;
+        let cargando = this.loadingCtrl.create({
+            content: "Cargando...",
+            duration: 1000
+        });
+        cargando.onDidDismiss(() => {
+            this.usuarioLogeado = true;
+        });
+        cargando.present();
     }
 
     abrirFacebook() {
