@@ -3,6 +3,12 @@
         <ion-title>
             {{ tituloPantalla }}
         </ion-title>
+        <ion-buttons [hidden]="!usuarioLogeado" start>
+            <button ion-button (click)="cerrarSesion()">
+                <span color="primary" showWhen="ios">Cerrar Sesión</span>
+                <span color="light" showWhen="android,windows,core">Cerrar Sesión</span>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 

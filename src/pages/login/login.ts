@@ -61,4 +61,9 @@ export class LoginPage {
         let indice = this.reservas.indexOf(reserva);
         this.reservas.splice(indice, 1);
     }
+
+    cerrarSesion() {
+        this.usuarioLogeado = false;
+        this.tituloPantalla = "Perfil";
+    }
 }
