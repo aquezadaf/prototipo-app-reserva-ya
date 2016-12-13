@@ -54,12 +54,8 @@ export class LoginPage {
         new InAppBrowser(urlPagina, "_system");
     }
 
-    detalleReserva(reserva: Reserva) {
-        console.log("Abrir detalle reserva", reserva);
-    }
-
     eliminarReserva(reserva: Reserva) {
         let indice = this.reservas.indexOf(reserva);
-        this.reservas.splice(indice, 1); 
+        this.reservas.splice(indice, 1);
     }
 }
